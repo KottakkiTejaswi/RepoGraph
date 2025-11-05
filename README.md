@@ -1,196 +1,122 @@
-RepoGraph (monorepo)
+# RepoGraph
 
-Visualize a codebase as an interactive dependency map.
-This monorepo contains:
+RepoGraph is a monorepo tool for **visualizing your codebase as an interactive dependency graph**.  
+It helps you explore project folders, files, and relationships — similar to **Apache NiFi’s flow canvas** — right inside a web UI.
 
-packages/analyzer – walks a repository and extracts nodes/edges
+---
 
-packages/cli – command-line wrapper that writes graph.json
+## Installation
 
-packages/web – Next.js app that renders the graph with pan/zoom, a file tree, and a file details overlay
+Use [pnpm](https://pnpm.io/) to install all dependencies and set up the project.
 
-Works on Windows, macOS, and Linux. Tested with pnpm workspaces.
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/repograph.git
+cd repograph
 
-Quick start
-# 1) Install dependencies (root)
+# Install all workspace dependencies
 pnpm install
+```
 
-# 2) Build analyzer + web (or use dev in step 4)
+---
+
+## Usage
+
+### Step 1 — Build all packages
+```bash
+pnpm -w build
+```
+
+### Step 2 — Generate the graph JSON
+Run the CLI to analyze your codebase and output `graph.json`.
+
+```bash
+# Windows
+pnpm -F cli start --repo D:\sample-pipeline --out D:\grph-new\packages\web\public\graph.json
+
+# macOS/Linux
+pnpm -F cli start --repo ~/code/sample-pipeline --out ./packages/web/public/graph.json
+```
+
+### Step 3 — Start the web viewer
+```bash
+pnpm -F web dev
+```
+
+Then open your browser at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Features
+
+- 📁 **File Tree Sidebar** – Browse and select folders or files  
+- 🧠 **Interactive Graph** – Zoom, pan, and explore file relationships visually  
+- 🧩 **Folder Focus** – Click a folder to see its subtree  
+- 🪶 **File Details Panel** – Opens an overlay for file info and (future) LLM-based descriptions  
+- ⚡ **NiFi-like Canvas** – Smooth zooming and panning experience with `react-zoom-pan-pinch`  
+
+---
+
+## Example
+
+```bash
+# Build analyzer and web packages
 pnpm -w build
 
-# 3) Generate the graph.json for a repo
-#    (Adjust the paths for your machine)
-pnpm -F cli start --repo D:\sample-pipeline --out D:\grph-new\packages\web\public\graph.json
-# or on *nix: pnpm -F cli start --repo ~/code/sample-pipeline --out ./packages/web/public/graph.json
+# Generate the graph data from your repo
+pnpm -F cli start --repo D:\projects\my-app --out D:\grph-new\packages\web\public\graph.json
 
-# 4) Run the web app
+# Run the visualizer
 pnpm -F web dev
-# open http://localhost:3000
+```
 
+---
 
-If you change the target repo later, re-run step 3 to refresh graph.json.
+## Configuration
 
-What you’ll see
+You can adjust layout and zoom behavior in  
+`packages/web/app/page.tsx`.
 
-Left sidebar: the target repo’s folder structure.
-
-Click a folder → focuses the graph on that subtree.
-
-Click a file → opens a details overlay (right side) for LLM/Copilot-style descriptions (placeholder UI now).
-
-Canvas: a right-to-left graph with edges labelled by relationship (child, imports, etc.).
-
-Zoom: mouse wheel / trackpad.
-
-Pan: click + drag (or trackpad two-finger scroll).
-
-Clear focus: resets to the full view.
-
-Overlay file details: appears on top of the canvas (no page scrolling required).
-
-Packages
-packages/analyzer
-
-Exposes a small API used by the CLI to walk files and produce an in-memory graph:
-
-nodes: { id, label } where id is prefixed dir: or file:
-
-edges: { from, to, type } where type ∈ { child, imports, ... }
-
-Output is serialized to graph.json.
-
-packages/cli
-
-Generate the graph file from any repo.
-
-pnpm -F cli start --repo <ABSOLUTE_PATH_TO_REPO> --out <ABSOLUTE_PATH_TO_graph.json>
-
-
-Common Windows gotchas
-
-Use absolute paths. If you see ENOENT scandir 'D:\sample-pipeline', double-check the folder name.
-
-Escape backslashes in package scripts if you edit them.
-
-Example outputs
-
-{
-  "meta": { "repo": "sample-pipeline" },
-  "nodes": [],
-  "edges": []
-}
-
-
-(Real output includes the full tree; above is just the shape.)
-
-packages/web
-
-Next.js app (App Router) using:
-
-[Reaflow] for graph + ELK layout
-
-react-zoom-pan-pinch for NiFi-style pan/zoom
-
-public/graph.json is read on the client at runtime.
-
-Dev
-
-pnpm -F web dev
-
-
-Production build
-
-pnpm -F web build && pnpm -F web start
-
-Project scripts
-
-At repo root:
-
-pnpm install                # install all workspaces
-pnpm -w build               # build analyzer + web
-pnpm -F cli start ...       # run the CLI (see above)
-pnpm -F web dev             # run the Next.js app (localhost:3000)
-pnpm -F web build           # production build
-pnpm -F web start           # serve production build
-
-Configuration & tuning
-
-Open packages/web/app/page.tsx:
-
-Direction: graph flows RIGHT (left→right).
-
-Spacing (ELK):
-
+```ts
+// Layout options
 layoutOptions={{
   'elk.algorithm': 'layered',
   'elk.direction': 'RIGHT',
   'elk.edgeRouting': 'SPLINES',
   'elk.spacing.nodeNode': '28',
   'elk.layered.spacing.nodeNodeBetweenLayers': '96',
-  'elk.layered.considerModelOrder': 'true',
 }}
 
-
-Increase/decrease spacing for tighter or looser layouts.
-
-Wide-layer wrapping: extremely wide folders are chunked into sub-columns using tiny “group” nodes to reduce clipping.
-
-const MAX_CHILDREN_PER_GROUP = 8; // lower => more sub-columns
-
-
-If large folders still look clipped, try 6 or 4.
-
-Pan/Zoom:
-
+// Zoom and pan settings
 minScale={0.15}
 maxScale={2.5}
 initialScale={0.9}
-limitToBounds={false} // infinite plane like NiFi
+limitToBounds={false}
 wheel={{ step: 0.005, smoothStep: 0.002 }}
+```
 
-Known limitations / roadmap
+Large folders are automatically wrapped into sub-columns to prevent clipping.
 
-Very large folders can still feel “wide.” The stagger/wrap logic helps, but we plan:
+---
 
-virtualized layers,
+## Troubleshooting
 
-collapsible edges (group by type),
+| Issue | Fix |
+|-------|-----|
+| `ENOENT: scandir ...` | Make sure the repo path is correct and absolute. |
+| Webpack cache warnings | Safe to ignore during development. |
+| Graph clipped or cut off | Zoom out or lower `MAX_CHILDREN_PER_GROUP` in layout config. |
+| Graph not updating | Re-run the CLI to regenerate `graph.json` and refresh the page. |
 
-“depth limiter” with expand-on-click.
+---
 
-Imports parsing is basic in the sample; extend the analyzer for TS/JS/py/etc. import graph edges.
+## Contributing
 
-File Details overlay is LLM-ready but currently a static placeholder—wire your model of choice.
+Pull requests are welcome!  
+For major changes, please open an issue first to discuss what you’d like to improve.
 
-Troubleshooting
+Make sure to test your changes in both:
+- the **CLI analyzer**
+- the **web graph viewer**
 
-ENOENT: no such file or directory, scandir
-
-The CLI was given a bad --repo path. Fix the path (Windows users: ensure the drive/dir exists).
-
-Build warnings like “Unable to snapshot resolve dependencies”
-
-Webpack cache warnings are safe to ignore for dev in this project.
-
-Type errors about alert (older code)
-
-We removed browser-only calls in server paths; if you re-add them, move to client components.
-
-react-zoom-pan-pinch API differences
-
-We target v3.7.x and avoid calling instance methods during mount. If you upgrade, keep centerOnInit={false} and avoid calling zoom methods in onInit.
-
-Graph doesn’t update after repo changes
-
-Re-run the CLI to regenerate graph.json (step 3 above), then refresh the page.
-
-Contributing
-
-Fork + create a feature branch.
-
-Make your changes in analyzer and/or web.
-
-Add a short note to this README if you introduce new options.
-
-
-PRs welcome!
+and update relevant documentation if needed.
