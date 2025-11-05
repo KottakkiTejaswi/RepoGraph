@@ -1,0 +1,1811 @@
+{
+  "meta": {
+    "repo": "jsoncrack.com",
+    "generatedAt": "2025-11-05T09:14:37.870Z",
+    "fileCount": 124,
+    "dirCount": 44
+  },
+  "nodes": [
+    {
+      "id": "dir:D:\\jsoncrack.com",
+      "kind": "dir",
+      "label": "."
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\public",
+      "kind": "dir",
+      "label": "public"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\public\\assets",
+      "kind": "dir",
+      "label": "public/assets"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src",
+      "kind": "dir",
+      "label": "src"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\assets",
+      "kind": "dir",
+      "label": "src/assets"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\assets\\fonts",
+      "kind": "dir",
+      "label": "src/assets/fonts"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\constants",
+      "kind": "dir",
+      "label": "src/constants"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\data",
+      "kind": "dir",
+      "label": "src/data"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\enums",
+      "kind": "dir",
+      "label": "src/enums"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features",
+      "kind": "dir",
+      "label": "src/features"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "kind": "dir",
+      "label": "src/features/editor"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "kind": "dir",
+      "label": "src/features/editor/Toolbar"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views",
+      "kind": "dir",
+      "label": "src/features/editor/views"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView/CustomEdge"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView/CustomNode"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView/lib"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView/lib/utils"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores",
+      "kind": "dir",
+      "label": "src/features/editor/views/GraphView/stores"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView",
+      "kind": "dir",
+      "label": "src/features/editor/views/TreeView"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "kind": "dir",
+      "label": "src/features/modals"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal",
+      "kind": "dir",
+      "label": "src/features/modals/DownloadModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\ImportModal",
+      "kind": "dir",
+      "label": "src/features/modals/ImportModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JPathModal",
+      "kind": "dir",
+      "label": "src/features/modals/JPathModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JQModal",
+      "kind": "dir",
+      "label": "src/features/modals/JQModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JWTModal",
+      "kind": "dir",
+      "label": "src/features/modals/JWTModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\NodeModal",
+      "kind": "dir",
+      "label": "src/features/modals/NodeModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal",
+      "kind": "dir",
+      "label": "src/features/modals/SchemaModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\features\\modals\\TypeModal",
+      "kind": "dir",
+      "label": "src/features/modals/TypeModal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\hooks",
+      "kind": "dir",
+      "label": "src/hooks"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\layout",
+      "kind": "dir",
+      "label": "src/layout"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\layout\\ConverterLayout",
+      "kind": "dir",
+      "label": "src/layout/ConverterLayout"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "kind": "dir",
+      "label": "src/layout/Landing"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\layout\\PageLayout",
+      "kind": "dir",
+      "label": "src/layout/PageLayout"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\layout\\TypeLayout",
+      "kind": "dir",
+      "label": "src/layout/TypeLayout"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\lib",
+      "kind": "dir",
+      "label": "src/lib"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "kind": "dir",
+      "label": "src/lib/utils"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\pages",
+      "kind": "dir",
+      "label": "src/pages"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "kind": "dir",
+      "label": "src/pages/converter"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\pages\\legal",
+      "kind": "dir",
+      "label": "src/pages/legal"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\pages\\tools",
+      "kind": "dir",
+      "label": "src/pages/tools"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "kind": "dir",
+      "label": "src/pages/type"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\store",
+      "kind": "dir",
+      "label": "src/store"
+    },
+    {
+      "id": "dir:D:\\jsoncrack.com\\src\\types",
+      "kind": "dir",
+      "label": "src/types"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\next-env.d.ts",
+      "kind": "file",
+      "label": "next-env.d.ts",
+      "file": "D:\\jsoncrack.com\\next-env.d.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\next-sitemap.config.js",
+      "kind": "file",
+      "label": "next-sitemap.config.js",
+      "file": "D:\\jsoncrack.com\\next-sitemap.config.js"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\next.config.js",
+      "kind": "file",
+      "label": "next.config.js",
+      "file": "D:\\jsoncrack.com\\next.config.js"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\sentry.client.config.ts",
+      "kind": "file",
+      "label": "sentry.client.config.ts",
+      "file": "D:\\jsoncrack.com\\sentry.client.config.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\sentry.edge.config.ts",
+      "kind": "file",
+      "label": "sentry.edge.config.ts",
+      "file": "D:\\jsoncrack.com\\sentry.edge.config.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\sentry.server.config.ts",
+      "kind": "file",
+      "label": "sentry.server.config.ts",
+      "file": "D:\\jsoncrack.com\\sentry.server.config.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\constants\\globalStyle.ts",
+      "kind": "file",
+      "label": "src/constants/globalStyle.ts",
+      "file": "D:\\jsoncrack.com\\src\\constants\\globalStyle.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\constants\\graph.ts",
+      "kind": "file",
+      "label": "src/constants/graph.ts",
+      "file": "D:\\jsoncrack.com\\src\\constants\\graph.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\constants\\seo.ts",
+      "kind": "file",
+      "label": "src/constants/seo.ts",
+      "file": "D:\\jsoncrack.com\\src\\constants\\seo.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\constants\\theme.ts",
+      "kind": "file",
+      "label": "src/constants/theme.ts",
+      "file": "D:\\jsoncrack.com\\src\\constants\\theme.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\enums\\file.enum.ts",
+      "kind": "file",
+      "label": "src/enums/file.enum.ts",
+      "file": "D:\\jsoncrack.com\\src\\enums\\file.enum.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\enums\\viewMode.enum.ts",
+      "kind": "file",
+      "label": "src/enums/viewMode.enum.ts",
+      "file": "D:\\jsoncrack.com\\src\\enums\\viewMode.enum.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\Banner.tsx",
+      "kind": "file",
+      "label": "src/features/Banner.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\Banner.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\BottomBar.tsx",
+      "kind": "file",
+      "label": "src/features/editor/BottomBar.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\BottomBar.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\ExternalMode.tsx",
+      "kind": "file",
+      "label": "src/features/editor/ExternalMode.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\ExternalMode.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\FullscreenDropzone.tsx",
+      "kind": "file",
+      "label": "src/features/editor/FullscreenDropzone.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\FullscreenDropzone.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\LiveEditor.tsx",
+      "kind": "file",
+      "label": "src/features/editor/LiveEditor.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\LiveEditor.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\TextEditor.tsx",
+      "kind": "file",
+      "label": "src/features/editor/TextEditor.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\TextEditor.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\FileMenu.tsx",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/FileMenu.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\FileMenu.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\index.tsx",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\SearchInput.tsx",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/SearchInput.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\SearchInput.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\styles.ts",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/styles.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\styles.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ToolsMenu.tsx",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/ToolsMenu.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ToolsMenu.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ViewMenu.tsx",
+      "kind": "file",
+      "label": "src/features/editor/Toolbar/ViewMenu.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ViewMenu.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge\\index.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomEdge/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\index.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomNode/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\ObjectNode.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomNode/ObjectNode.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\ObjectNode.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\styles.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomNode/styles.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\styles.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextNode.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomNode/TextNode.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextNode.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextRenderer.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/CustomNode/TextRenderer.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextRenderer.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\index.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\jsonParser.ts",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/lib/jsonParser.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\jsonParser.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\calculateNodeSize.ts",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/lib/utils/calculateNodeSize.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\calculateNodeSize.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getChildrenEdges.ts",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/lib/utils/getChildrenEdges.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getChildrenEdges.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getOutgoers.ts",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/lib/utils/getOutgoers.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getOutgoers.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\NotSupported.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/NotSupported.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\NotSupported.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\OptionsMenu.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/OptionsMenu.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\OptionsMenu.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\SecureInfo.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/SecureInfo.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\SecureInfo.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores\\useGraph.ts",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/stores/useGraph.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores\\useGraph.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\ZoomControl.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/GraphView/ZoomControl.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\ZoomControl.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\index.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/TreeView/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Label.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/TreeView/Label.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Label.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Value.tsx",
+      "kind": "file",
+      "label": "src/features/editor/views/TreeView/Value.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Value.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/DownloadModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\ImportModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/ImportModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\ImportModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\index.ts",
+      "kind": "file",
+      "label": "src/features/modals/index.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\index.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\JPathModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/JPathModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\JPathModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\JQModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/JQModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\JQModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\JWTModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/JWTModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\JWTModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\ModalController.tsx",
+      "kind": "file",
+      "label": "src/features/modals/ModalController.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\ModalController.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\modalTypes.ts",
+      "kind": "file",
+      "label": "src/features/modals/modalTypes.ts",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\modalTypes.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\NodeModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/NodeModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\NodeModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/SchemaModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\features\\modals\\TypeModal\\index.tsx",
+      "kind": "file",
+      "label": "src/features/modals/TypeModal/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\features\\modals\\TypeModal\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\hooks\\useFocusNode.ts",
+      "kind": "file",
+      "label": "src/hooks/useFocusNode.ts",
+      "file": "D:\\jsoncrack.com\\src\\hooks\\useFocusNode.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\hooks\\useJsonQuery.ts",
+      "kind": "file",
+      "label": "src/hooks/useJsonQuery.ts",
+      "file": "D:\\jsoncrack.com\\src\\hooks\\useJsonQuery.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\options.ts",
+      "kind": "file",
+      "label": "src/layout/ConverterLayout/options.ts",
+      "file": "D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\options.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\PageLinks.tsx",
+      "kind": "file",
+      "label": "src/layout/ConverterLayout/PageLinks.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\PageLinks.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\ToolPage.tsx",
+      "kind": "file",
+      "label": "src/layout/ConverterLayout/ToolPage.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\ToolPage.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\JsonCrackLogo.tsx",
+      "kind": "file",
+      "label": "src/layout/JsonCrackLogo.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\JsonCrackLogo.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\FAQ.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/FAQ.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\FAQ.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Features.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/Features.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\Features.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\HeroPreview.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/HeroPreview.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\HeroPreview.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\HeroSection.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/HeroSection.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\HeroSection.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\LovedBy.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/LovedBy.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\LovedBy.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section1.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/Section1.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\Section1.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section2.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/Section2.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\Section2.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section3.tsx",
+      "kind": "file",
+      "label": "src/layout/Landing/Section3.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\Landing\\Section3.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\Footer.tsx",
+      "kind": "file",
+      "label": "src/layout/PageLayout/Footer.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\PageLayout\\Footer.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\index.tsx",
+      "kind": "file",
+      "label": "src/layout/PageLayout/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\PageLayout\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\Navbar.tsx",
+      "kind": "file",
+      "label": "src/layout/PageLayout/Navbar.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\PageLayout\\Navbar.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\TypeLayout\\PageLinks.tsx",
+      "kind": "file",
+      "label": "src/layout/TypeLayout/PageLinks.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\TypeLayout\\PageLinks.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\layout\\TypeLayout\\TypegenWrapper.tsx",
+      "kind": "file",
+      "label": "src/layout/TypeLayout/TypegenWrapper.tsx",
+      "file": "D:\\jsoncrack.com\\src\\layout\\TypeLayout\\TypegenWrapper.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\generateType.ts",
+      "kind": "file",
+      "label": "src/lib/utils/generateType.ts",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\generateType.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\helpers.ts",
+      "kind": "file",
+      "label": "src/lib/utils/helpers.ts",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\helpers.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\json2go.js",
+      "kind": "file",
+      "label": "src/lib/utils/json2go.js",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\json2go.js"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\jsonAdapter.ts",
+      "kind": "file",
+      "label": "src/lib/utils/jsonAdapter.ts",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\jsonAdapter.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\mantineColorScheme.ts",
+      "kind": "file",
+      "label": "src/lib/utils/mantineColorScheme.ts",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\mantineColorScheme.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\lib\\utils\\search.ts",
+      "kind": "file",
+      "label": "src/lib/utils/search.ts",
+      "file": "D:\\jsoncrack.com\\src\\lib\\utils\\search.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\_app.tsx",
+      "kind": "file",
+      "label": "src/pages/_app.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\_app.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\_document.tsx",
+      "kind": "file",
+      "label": "src/pages/_document.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\_document.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\_error.tsx",
+      "kind": "file",
+      "label": "src/pages/_error.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\_error.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\404.tsx",
+      "kind": "file",
+      "label": "src/pages/404.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\404.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-json.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/csv-to-json.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-json.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-xml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/csv-to-xml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-xml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-yaml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/csv-to-yaml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-yaml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-csv.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/json-to-csv.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\json-to-csv.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-xml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/json-to-xml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\json-to-xml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-yaml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/json-to-yaml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\json-to-yaml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-csv.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/xml-to-csv.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-csv.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-json.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/xml-to-json.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-json.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-yaml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/xml-to-yaml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-yaml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-csv.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/yaml-to-csv.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-csv.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-json.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/yaml-to-json.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-json.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-xml.tsx",
+      "kind": "file",
+      "label": "src/pages/converter/yaml-to-xml.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-xml.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\docs.tsx",
+      "kind": "file",
+      "label": "src/pages/docs.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\docs.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\editor.tsx",
+      "kind": "file",
+      "label": "src/pages/editor.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\editor.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\index.tsx",
+      "kind": "file",
+      "label": "src/pages/index.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\index.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\legal\\privacy.tsx",
+      "kind": "file",
+      "label": "src/pages/legal/privacy.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\legal\\privacy.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\legal\\terms.tsx",
+      "kind": "file",
+      "label": "src/pages/legal/terms.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\legal\\terms.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\tools\\json-schema.tsx",
+      "kind": "file",
+      "label": "src/pages/tools/json-schema.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\tools\\json-schema.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-go.tsx",
+      "kind": "file",
+      "label": "src/pages/type/csv-to-go.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\csv-to-go.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-kotlin.tsx",
+      "kind": "file",
+      "label": "src/pages/type/csv-to-kotlin.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\csv-to-kotlin.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-rust.tsx",
+      "kind": "file",
+      "label": "src/pages/type/csv-to-rust.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\csv-to-rust.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-typescript.tsx",
+      "kind": "file",
+      "label": "src/pages/type/csv-to-typescript.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\csv-to-typescript.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-go.tsx",
+      "kind": "file",
+      "label": "src/pages/type/json-to-go.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\json-to-go.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-kotlin.tsx",
+      "kind": "file",
+      "label": "src/pages/type/json-to-kotlin.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\json-to-kotlin.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-rust.tsx",
+      "kind": "file",
+      "label": "src/pages/type/json-to-rust.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\json-to-rust.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-typescript.tsx",
+      "kind": "file",
+      "label": "src/pages/type/json-to-typescript.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\json-to-typescript.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-go.tsx",
+      "kind": "file",
+      "label": "src/pages/type/xml-to-go.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\xml-to-go.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-kotlin.tsx",
+      "kind": "file",
+      "label": "src/pages/type/xml-to-kotlin.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\xml-to-kotlin.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-rust.tsx",
+      "kind": "file",
+      "label": "src/pages/type/xml-to-rust.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\xml-to-rust.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-typescript.tsx",
+      "kind": "file",
+      "label": "src/pages/type/xml-to-typescript.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\xml-to-typescript.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-go.tsx",
+      "kind": "file",
+      "label": "src/pages/type/yaml-to-go.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-go.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-kotlin.tsx",
+      "kind": "file",
+      "label": "src/pages/type/yaml-to-kotlin.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-kotlin.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-rust.tsx",
+      "kind": "file",
+      "label": "src/pages/type/yaml-to-rust.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-rust.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-typescript.tsx",
+      "kind": "file",
+      "label": "src/pages/type/yaml-to-typescript.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-typescript.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\pages\\widget.tsx",
+      "kind": "file",
+      "label": "src/pages/widget.tsx",
+      "file": "D:\\jsoncrack.com\\src\\pages\\widget.tsx"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\store\\useConfig.ts",
+      "kind": "file",
+      "label": "src/store/useConfig.ts",
+      "file": "D:\\jsoncrack.com\\src\\store\\useConfig.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\store\\useFile.ts",
+      "kind": "file",
+      "label": "src/store/useFile.ts",
+      "file": "D:\\jsoncrack.com\\src\\store\\useFile.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\store\\useJson.ts",
+      "kind": "file",
+      "label": "src/store/useJson.ts",
+      "file": "D:\\jsoncrack.com\\src\\store\\useJson.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\store\\useModal.ts",
+      "kind": "file",
+      "label": "src/store/useModal.ts",
+      "file": "D:\\jsoncrack.com\\src\\store\\useModal.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\types\\graph.ts",
+      "kind": "file",
+      "label": "src/types/graph.ts",
+      "file": "D:\\jsoncrack.com\\src\\types\\graph.ts"
+    },
+    {
+      "id": "file:D:\\jsoncrack.com\\src\\types\\styled.d.ts",
+      "kind": "file",
+      "label": "src/types/styled.d.ts",
+      "file": "D:\\jsoncrack.com\\src\\types\\styled.d.ts"
+    }
+  ],
+  "edges": [
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "dir:D:\\jsoncrack.com\\public",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\public",
+      "to": "dir:D:\\jsoncrack.com\\public\\assets",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "dir:D:\\jsoncrack.com\\src",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\assets",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\assets",
+      "to": "dir:D:\\jsoncrack.com\\src\\assets\\fonts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\constants",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\data",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\enums",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\features",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\ImportModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JPathModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JQModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JWTModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\NodeModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "dir:D:\\jsoncrack.com\\src\\features\\modals\\TypeModal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\hooks",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\layout",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout",
+      "to": "dir:D:\\jsoncrack.com\\src\\layout\\ConverterLayout",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout",
+      "to": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout",
+      "to": "dir:D:\\jsoncrack.com\\src\\layout\\PageLayout",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout",
+      "to": "dir:D:\\jsoncrack.com\\src\\layout\\TypeLayout",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\lib",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib",
+      "to": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\pages",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "dir:D:\\jsoncrack.com\\src\\pages\\legal",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "dir:D:\\jsoncrack.com\\src\\pages\\tools",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\store",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src",
+      "to": "dir:D:\\jsoncrack.com\\src\\types",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\next-env.d.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\next-sitemap.config.js",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\next.config.js",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\sentry.client.config.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\sentry.edge.config.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com",
+      "to": "file:D:\\jsoncrack.com\\sentry.server.config.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\constants",
+      "to": "file:D:\\jsoncrack.com\\src\\constants\\globalStyle.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\constants",
+      "to": "file:D:\\jsoncrack.com\\src\\constants\\graph.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\constants",
+      "to": "file:D:\\jsoncrack.com\\src\\constants\\seo.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\constants",
+      "to": "file:D:\\jsoncrack.com\\src\\constants\\theme.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\enums",
+      "to": "file:D:\\jsoncrack.com\\src\\enums\\file.enum.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\enums",
+      "to": "file:D:\\jsoncrack.com\\src\\enums\\viewMode.enum.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\Banner.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\BottomBar.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\ExternalMode.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\FullscreenDropzone.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\LiveEditor.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\TextEditor.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\FileMenu.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\SearchInput.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\styles.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ToolsMenu.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\Toolbar\\ViewMenu.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomEdge\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\ObjectNode.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\styles.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextNode.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\CustomNode\\TextRenderer.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\jsonParser.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\calculateNodeSize.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getChildrenEdges.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\lib\\utils\\getOutgoers.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\NotSupported.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\OptionsMenu.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\SecureInfo.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\stores\\useGraph.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\GraphView\\ZoomControl.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Label.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\editor\\views\\TreeView\\Value.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\DownloadModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\ImportModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\ImportModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\index.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JPathModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\JPathModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JQModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\JQModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\JWTModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\JWTModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\ModalController.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\modalTypes.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\NodeModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\NodeModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\SchemaModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\features\\modals\\TypeModal",
+      "to": "file:D:\\jsoncrack.com\\src\\features\\modals\\TypeModal\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\hooks",
+      "to": "file:D:\\jsoncrack.com\\src\\hooks\\useFocusNode.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\hooks",
+      "to": "file:D:\\jsoncrack.com\\src\\hooks\\useJsonQuery.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\ConverterLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\options.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\ConverterLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\PageLinks.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\ConverterLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\ConverterLayout\\ToolPage.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\JsonCrackLogo.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\FAQ.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Features.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\HeroPreview.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\HeroSection.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\LovedBy.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section1.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section2.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\Landing",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\Landing\\Section3.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\PageLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\Footer.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\PageLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\PageLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\PageLayout\\Navbar.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\TypeLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\TypeLayout\\PageLinks.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\layout\\TypeLayout",
+      "to": "file:D:\\jsoncrack.com\\src\\layout\\TypeLayout\\TypegenWrapper.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\generateType.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\helpers.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\json2go.js",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\jsonAdapter.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\mantineColorScheme.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\lib\\utils",
+      "to": "file:D:\\jsoncrack.com\\src\\lib\\utils\\search.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\_app.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\_document.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\_error.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\404.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-json.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-xml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\csv-to-yaml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-csv.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-xml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\json-to-yaml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-csv.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-json.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\xml-to-yaml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-csv.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-json.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\converter",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\converter\\yaml-to-xml.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\docs.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\editor.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\index.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\legal",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\legal\\privacy.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\legal",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\legal\\terms.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\tools",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\tools\\json-schema.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-go.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-kotlin.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-rust.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\csv-to-typescript.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-go.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-kotlin.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-rust.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\json-to-typescript.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-go.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-kotlin.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-rust.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\xml-to-typescript.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-go.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-kotlin.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-rust.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages\\type",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\type\\yaml-to-typescript.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\pages",
+      "to": "file:D:\\jsoncrack.com\\src\\pages\\widget.tsx",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\store",
+      "to": "file:D:\\jsoncrack.com\\src\\store\\useConfig.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\store",
+      "to": "file:D:\\jsoncrack.com\\src\\store\\useFile.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\store",
+      "to": "file:D:\\jsoncrack.com\\src\\store\\useJson.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\store",
+      "to": "file:D:\\jsoncrack.com\\src\\store\\useModal.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\types",
+      "to": "file:D:\\jsoncrack.com\\src\\types\\graph.ts",
+      "type": "child"
+    },
+    {
+      "from": "dir:D:\\jsoncrack.com\\src\\types",
+      "to": "file:D:\\jsoncrack.com\\src\\types\\styled.d.ts",
+      "type": "child"
+    }
+  ]
+}
