@@ -19,13 +19,72 @@ const TransformComponent = dynamic(
 type RawGraph = { nodes: any[]; edges: any[] };
 const isDirId = (id: string) => id.startsWith('dir:');
 
-// Padding (pixels) we’ll add around the measured bbox before fitting
-const FIT_PADDING = { x: 80, y: 80 };
-// Clamp initial scale so text stays readable
-const MIN_FIT_SCALE = 0.06;
-const MAX_FIT_SCALE = 1.2;
+// ---------- Helpers ----------
+const filename = (p: string) => {
+  const parts = String(p).replace(/\\/g, '/').split('/');
+  return parts[parts.length - 1] || p;
+};
+
+// --- BEGIN: width-wrapping / indentation helper ---
+type NodeLike = { id: string; text: string; width?: number; height?: number };
+type EdgeLike = { id: string; from: string; to: string; type?: string };
+
+const GROUP_NODE_PREFIX = 'group:'; // unique id prefix for synthetic nodes
+const MAX_CHILDREN_PER_GROUP = 8;   // tune: smaller = more stagger columns
+
+/**
+ * For any parent with too many direct children, insert tiny "group" nodes and
+ * route children through them so the layer wraps to additional sub-columns.
+ */
+function wrapWideLayers(
+  nodes: NodeLike[],
+  edges: EdgeLike[]
+): { nodes: NodeLike[]; edges: EdgeLike[] } {
+  const childrenByParent = new Map<string, string[]>();
+  for (const e of edges) {
+    if (e.type === 'child') {
+      const arr = childrenByParent.get(e.from) ?? [];
+      arr.push(e.to);
+      childrenByParent.set(e.from, arr);
+    }
+  }
+
+  const newNodes: NodeLike[] = [...nodes];
+  const newEdges: EdgeLike[] = edges.filter(e => e.type !== 'child'); // keep non-child edges
+
+  for (const [parentId, kids] of childrenByParent) {
+    if (kids.length <= MAX_CHILDREN_PER_GROUP) {
+      // keep original child edges as-is
+      for (const k of kids) {
+        newEdges.push({ id: `${parentId}->${k}`, from: parentId, to: k, type: 'child' });
+      }
+      continue;
+    }
+
+    // Chunk kids into groups
+    for (let i = 0; i < kids.length; i += MAX_CHILDREN_PER_GROUP) {
+      const chunk = kids.slice(i, i + MAX_CHILDREN_PER_GROUP);
+      const gid = `${GROUP_NODE_PREFIX}${parentId}:${i / MAX_CHILDREN_PER_GROUP}`;
+
+      // Tiny, unobtrusive router node
+      newNodes.push({ id: gid, text: '…', width: 28, height: 22 });
+
+      // parent -> group
+      newEdges.push({ id: `${parentId}->${gid}`, from: parentId, to: gid, type: 'child' });
+
+      // group -> original kids
+      for (const k of chunk) {
+        newEdges.push({ id: `${gid}->${k}`, from: gid, to: k, type: 'child' });
+      }
+    }
+  }
+
+  return { nodes: newNodes, edges: newEdges };
+}
+// --- END: width-wrapping / indentation helper ---
 
 export default function Page() {
+  // Mount gate to avoid rzp@3.7.0 “Components are not mounted” quirks
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -33,30 +92,18 @@ export default function Page() {
   const [focusedId, setFocusedId] = useState<string | null>(null);
   const [detailsPath, setDetailsPath] = useState<string | null>(null);
 
-  // We’ll store latest laid-out nodes (x/y/width/height) here
+  // Last-known layout positions (if you want zoom-to-node later)
   const layoutMapRef = useRef<Map<string, any>>(new Map());
-
-  // The container holding the zoom canvas (we read its client size)
-  const viewportRef = useRef<HTMLDivElement | null>(null);
-
-  // Values we compute to *fit* the graph in view
-  const [fit, setFit] = useState<{
-    scale: number;
-    posX: number;
-    posY: number;
-    // changing this key forces TransformWrapper to remount and apply new initial* props
-    key: string;
-  }>({ scale: 0.9, posX: 0, posY: 0, key: 'init' });
 
   // Load graph.json
   useEffect(() => {
     (async () => {
       try {
         const res = await fetch('/graph.json', { cache: 'no-store' });
-        const json = await res.json();
-        setRaw(json);
+        if (!res.ok) throw new Error(`Failed to fetch graph data: ${res.statusText}`);
+        setRaw(await res.json());
       } catch (err) {
-        console.error('Failed to load graph.json:', err);
+        console.error('Failed to load graph data:', err);
       }
     })();
   }, []);
@@ -82,31 +129,27 @@ export default function Page() {
     return map;
   }, [raw]);
 
-  // Sidebar tree
+  // Sidebar items
   const treeItems: TreeItem[] = useMemo(() => {
-    return (raw.nodes ?? [])
-      .filter(n => n.label)
-      .map(n => ({
-        path: String(n.label).replace(/\\/g, '/'),
-        isDir: String(n.id).startsWith('dir:'),
-      }));
+    const items: TreeItem[] = [];
+    for (const n of raw.nodes ?? []) {
+      const path = String(n.label ?? '').replace(/\\/g, '/');
+      if (path) items.push({ path, isDir: String(n.id).startsWith('dir:') });
+    }
+    return items;
   }, [raw]);
 
-  const filename = (p: string) => {
-    const parts = p.replace(/\\/g, '/').split('/');
-    return parts[parts.length - 1] || p;
-  };
-
-  // Nodes
+  // Canvas nodes (short labels)
   const allNodes = useMemo(() => {
     return (raw.nodes ?? []).map((n: any) => {
       const isDir = String(n.id).startsWith('dir:');
-      const text = isDir ? `📁 ${filename(String(n.label ?? n.id))}` : filename(String(n.label ?? n.id));
+      const text = isDir ? `📁 ${filename(String(n.label ?? n.id))}`
+                         : filename(String(n.label ?? n.id));
       return {
         id: String(n.id),
         text,
         width: Math.min(260, Math.max(140, text.length * 7)),
-        height: isDir ? 38 : 46,
+        height: isDir ? 38 : 46
       };
     });
   }, [raw]);
@@ -117,12 +160,13 @@ export default function Page() {
       id: `${e.from}->${e.to}:${i}`,
       from: String(e.from),
       to: String(e.to),
-      type: e.type,
+      text: e.type,
+      type: e.type
     }));
   }, [raw]);
 
-  // Focus logic (subtree)
-  const { nodes, edges } = useMemo(() => {
+  // Focus logic: folder = subtree; file = parent subtree
+  const subtree = useMemo(() => {
     if (!focusedId) return { nodes: allNodes, edges: allEdges };
 
     const buildSubtree = (root: string) => {
@@ -143,7 +187,7 @@ export default function Page() {
       }
       return {
         nodes: allNodes.filter(n => keep.has(n.id)),
-        edges: allEdges.filter(e => keep.has(e.from) && keep.has(e.to)),
+        edges: allEdges.filter(e => keep.has(e.from) && keep.has(e.to))
       };
     };
 
@@ -152,71 +196,25 @@ export default function Page() {
     return parent ? buildSubtree(parent) : { nodes: allNodes, edges: allEdges };
   }, [focusedId, allNodes, allEdges, parentOfFile]);
 
-  // Sidebar click
-  const handleSelect = (path: string, kind: 'dir' | 'file') => {
-    const id = labelToId.get(path.replace(/\\/g, '/'));
+  // NEW: wrap very wide layers so huge folders don't get clipped
+  const { nodes: wrappedNodes, edges: wrappedEdges } = useMemo(
+    () => wrapWideLayers(subtree.nodes as any[], subtree.edges as any[]),
+    [subtree.nodes, subtree.edges]
+  );
+
+  // Sidebar selection handler
+  const handleSelect = (repoRelPath: string, kind: 'dir' | 'file') => {
+    const id = labelToId.get(repoRelPath.replace(/\\/g, '/'));
     if (!id) return;
     setFocusedId(id);
-    setDetailsPath(kind === 'file' ? path : null);
+    setDetailsPath(kind === 'file' ? repoRelPath : null);
   };
 
-  // Zoom configs
+  // Pan/zoom configs (memoized; rzp@3.7.0 doesn’t like prop identity churn)
   const dblClickCfg = useMemo(() => ({ disabled: false, mode: 'zoomIn' as const }), []);
-  const wheelCfg = useMemo(() => ({ step: 0.005, smoothStep: 0.002, activationKeys: [] }), []);
-  const panCfg = useMemo(() => ({ velocityDisabled: true }), []);
-  const pinchCfg = useMemo(() => ({ step: 5 }), []);
-
-  // When layout changes (or focus changes), compute a fit-to-view transform
-  useEffect(() => {
-    const el = viewportRef.current;
-    if (!el) return;
-
-    // read latest laid-out nodes
-    const laidOut = layoutMapRef.current;
-    if (!laidOut || laidOut.size === 0) return;
-
-    let minX = Number.POSITIVE_INFINITY;
-    let minY = Number.POSITIVE_INFINITY;
-    let maxX = Number.NEGATIVE_INFINITY;
-    let maxY = Number.NEGATIVE_INFINITY;
-
-    laidOut.forEach((n) => {
-      const x0 = n.x ?? 0;
-      const y0 = n.y ?? 0;
-      const w = n.width ?? 0;
-      const h = n.height ?? 0;
-      minX = Math.min(minX, x0);
-      minY = Math.min(minY, y0);
-      maxX = Math.max(maxX, x0 + w);
-      maxY = Math.max(maxY, y0 + h);
-    });
-
-    if (!isFinite(minX) || !isFinite(minY) || !isFinite(maxX) || !isFinite(maxY)) return;
-
-    const gWidth = (maxX - minX) + FIT_PADDING.x * 2;
-    const gHeight = (maxY - minY) + FIT_PADDING.y * 2;
-
-    const viewW = el.clientWidth;
-    const viewH = el.clientHeight;
-
-    // Compute scale so entire bbox fits
-    const scale = Math.max(
-      MIN_FIT_SCALE,
-      Math.min(MAX_FIT_SCALE, Math.min(viewW / gWidth, viewH / gHeight))
-    );
-
-    // Position so graph bbox is centered
-    const posX = -((minX - FIT_PADDING.x) * scale) + (viewW - gWidth * scale) / 2;
-    const posY = -((minY - FIT_PADDING.y) * scale) + (viewH - gHeight * scale) / 2;
-
-    // Force TransformWrapper to remount with these initial values
-    setFit({
-      scale,
-      posX,
-      posY,
-      key: `fit-${focusedId ?? 'all'}-${nodes.length}-${edges.length}-${Math.round(scale * 1000)}`,
-    });
-  }, [focusedId, nodes.length, edges.length]);
+  const wheelCfg    = useMemo(() => ({ step: 0.005, smoothStep: 0.002, activationKeys: [] }), []);
+  const panCfg      = useMemo(() => ({ velocityDisabled: true }), []);
+  const pinchCfg    = useMemo(() => ({ step: 5 }), []);
 
   if (!mounted) {
     return <div style={{ height: '100vh', width: '100vw', background: '#0f1115' }} />;
@@ -229,7 +227,8 @@ export default function Page() {
         gridTemplateColumns: '280px 1fr',
         height: '100vh',
         width: '100vw',
-        overflow: 'hidden',
+        overflow: 'hidden', // no page scrollbars; zoom/pan handles navigation
+        background: '#0f1115'
       }}
     >
       {/* Sidebar */}
@@ -238,22 +237,14 @@ export default function Page() {
           borderRight: '1px solid #232833',
           background: '#0e1117',
           color: '#e5e7eb',
-          overflowY: 'auto',
+          overflowY: 'auto'
         }}
       >
         <FileTree items={treeItems} onSelect={handleSelect} />
       </aside>
 
-      {/* Graph region */}
-      <main
-        style={{
-          position: 'relative',
-          display: 'grid',
-          gridTemplateRows: '44px 1fr',
-          background: '#0f1115',
-          overflow: 'hidden',
-        }}
-      >
+      {/* Main area (title + graph) */}
+      <main style={{ position: 'relative', display: 'grid', gridTemplateRows: '44px 1fr' }}>
         {/* Top bar */}
         <div
           style={{
@@ -262,6 +253,8 @@ export default function Page() {
             padding: '8px 12px',
             borderBottom: '1px solid #232833',
             gap: 8,
+            background: '#0f1115',
+            color: '#e5e7eb'
           }}
         >
           <span style={{ opacity: 0.9 }}>
@@ -270,79 +263,82 @@ export default function Page() {
           {(focusedId || detailsPath) && (
             <button
               onClick={() => { setFocusedId(null); setDetailsPath(null); }}
-              style={btnStyle}
+              style={{
+                marginLeft: 'auto',
+                background: '#1f2937',
+                color: '#e5e7eb',
+                border: '1px solid #2b3140',
+                padding: '6px 10px',
+                borderRadius: 8,
+                cursor: 'pointer'
+              }}
             >
               Clear focus
             </button>
           )}
         </div>
 
-        {/* Zoom/canvas viewport */}
-        <div ref={viewportRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
+        {/* Graph container (relative for overlay) */}
+        <div style={{ position: 'relative', width: '100%', height: '100%', background: '#0f1115' }}>
           <TransformWrapper
-            // remount when fit changes so new initial values apply
-            key={fit.key}
-            minScale={0.05}
+            // NiFi-like plane
+            minScale={0.15}
             maxScale={2.5}
-            initialScale={fit.scale}
-            initialPositionX={fit.posX}
-            initialPositionY={fit.posY}
+            initialScale={0.9}
+            initialPositionX={0}
+            initialPositionY={0}
             centerOnInit={false}
+            limitToBounds={false}
+
+            // Gestures
             doubleClick={dblClickCfg}
             wheel={wheelCfg}
             panning={panCfg}
             pinch={pinchCfg}
-            limitToBounds={false}
           >
             <TransformComponent
-              wrapperStyle={{
-                width: '100%',
-                height: '100%',
-                overflow: 'hidden',
-                background: '#0f1115',
-              }}
+              wrapperStyle={{ width: '100%', height: '100%', overflow: 'hidden', background: '#0f1115' }}
               contentStyle={{ width: 'max-content', height: 'max-content' }}
             >
               <Canvas
-                key={`c-${focusedId ?? 'all'}-${nodes.length}-${edges.length}`}
+                key={`c-${focusedId ?? 'all'}-${wrappedNodes.length}-${wrappedEdges.length}`}
                 direction="RIGHT"
-                layoutOptions={{
-                    'elk.algorithm': 'layered',
-                    'elk.direction': 'RIGHT',
-                    'elk.edgeRouting': 'SPLINES',
-                    // tighten spacing a bit (tweak to taste)
-                    'elk.spacing.nodeNode': '28',
-                    'elk.layered.spacing.nodeNodeBetweenLayers': '96',
-                    'elk.layered.considerModelOrder': 'true'
-                  }}
-                nodes={nodes as any}
-                edges={edges as any}
+                nodes={wrappedNodes as any}
+                edges={wrappedEdges as any}
                 readonly
                 animated
+                layoutOptions={{
+                  'elk.algorithm': 'layered',
+                  'elk.direction': 'RIGHT',
+                  'elk.edgeRouting': 'SPLINES',
+                  'elk.spacing.nodeNode': '28',
+                  'elk.layered.spacing.nodeNodeBetweenLayers': '96',
+                  'elk.layered.considerModelOrder': 'true'
+                }}
                 onLayoutChange={(layout: any) => {
                   const pos = new Map<string, any>();
                   layout?.nodes?.forEach((n: any) => pos.set(n.id, n));
                   layoutMapRef.current = pos;
-                  // The effect above (that computes fit) will run after this re-render.
                 }}
               />
             </TransformComponent>
           </TransformWrapper>
 
-          {/* Floating Details overlay */}
+          {/* File details overlay (no page scroll needed) */}
           {detailsPath && (
             <div
               style={{
                 position: 'absolute',
-                top: 0,
-                right: 0,
-                width: 360,
-                height: '100%',
-                background: '#111827',
-                borderLeft: '1px solid #232833',
-                overflowY: 'auto',
-                zIndex: 40,
-                boxShadow: '-4px 0 8px rgba(0,0,0,0.4)',
+                right: 16,
+                top: 60,
+                bottom: 16,
+                width: 'min(420px, 38vw)',
+                background: '#0e1117',
+                border: '1px solid #232833',
+                borderRadius: 10,
+                overflow: 'hidden',
+                zIndex: 20,
+                boxShadow: '0 10px 30px rgba(0,0,0,0.45)'
               }}
             >
               <FileDetails path={detailsPath} onClose={() => setDetailsPath(null)} />
@@ -353,12 +349,3 @@ export default function Page() {
     </div>
   );
 }
-
-const btnStyle: React.CSSProperties = {
-  padding: '8px 10px',
-  borderRadius: 8,
-  border: '1px solid #2b3140',
-  background: '#1f2937',
-  color: '#e5e7eb',
-  cursor: 'pointer',
-};
