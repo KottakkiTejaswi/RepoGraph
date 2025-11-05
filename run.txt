@@ -1,0 +1,11 @@
+# 1. Install deps
+pnpm install
+
+# 2. Build all packages
+pnpm -w build
+
+# 3. Generate graph.json
+pnpm -F cli start --repo "D:\path\to\your\repo" --out "D:\repo-graph\packages\web\public\graph.json"
+
+# 4. Run the web UI
+pnpm -F web dev
